@@ -1,0 +1,5 @@
+<%= form_for([@facilitation, @vote]) do |f| %>
+  <%= f.button ":)", :name => "vote[score]", :value => "100", :class => 'btn btn-primary btn-success' %>
+  <%= f.button ":|", :name => "vote[score]", :value => "50",  :class => 'btn btn-primary btn-warning' %>
+  <%= f.button ":(", :name => "vote[score]", :value => "0",  :class => 'btn btn-primary btn-danger' %>
+<% end %>
