@@ -9,7 +9,7 @@ class VotesController < ApplicationController
     @facilitation = Facilitation.find(params[:facilitation_id])
     @vote  = @facilitation.votes.build(params[:vote].permit(:score))
     if @vote.save
-      flash[:success] = 'Thanks'
+      flash[:success] = 'Thanks!'
     else
       flash[:error] = 'Sorry. Could not compute your vote. Try again later.'
     end
