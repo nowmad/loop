@@ -1,5 +1,5 @@
 class Facilitation < ActiveRecord::Base
-  has_many :votes
+  has_many :feedbacks
 
   validates :title, :facilitator_email, presence: true
 
