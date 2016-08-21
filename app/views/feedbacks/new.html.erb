@@ -1,8 +1,12 @@
 <h1>New Feedback</h1>
-
+<p>Happy</p>
 <%= form_for([@facilitation,@feedback]) do |f| %>
   <%= f.fields_for :feedback_items do |fi| %>
+    <p>text<p>
     <%= fi.text_field :description %>
+    <%= fi.hidden_field :mood, :value => 100 %>
   <% end %>
-  <!-- TODO: ADD SUBMIT NO FORM -->
+
+  <%= f.submit nil, :class => 'btn btn-primary' %>
+
 <% end %>
